@@ -1,0 +1,107 @@
+# Phase 1 – Harden the Foundation (0–3 Months)
+
+This is Linux + scripting depth.
+
+Not surface-level.
+
+You should be comfortable with:
+
+Linux:
+
+- systemctl
+- journalctl
+- grep / awk / sed
+- permissions
+- users/groups
+- crontab
+- ssh
+- networking basics (ss, netstat, ping, traceroute)
+
+Python:
+
+- loops
+- functions
+- reading files
+- basic error handling
+- calling system commands
+- working with JSON
+
+Goal:
+
+Be able to automate OS-level tasks cleanly.
+
+If you can't automate your own workstation setup,
+
+you’re not ready for cloud scale.
+
+---
+
+# Phase 2 – AWS Fundamentals (3–6 Months)
+
+No deep wizardry yet.
+
+Master:
+
+- EC2
+- IAM
+- VPC
+- Security Groups
+- S3
+- CloudWatch
+- Basic networking concepts
+
+Build small labs:
+
+- Launch EC2
+- Attach IAM role
+- Configure security group
+- SSH in
+- Install NGINX
+- Set up CloudWatch alarm
+
+Understand what’s happening, not just clicking.
+
+---
+
+# Phase 3 – Terraform Layer (6–8 Months)
+
+Now introduce Terraform.
+
+Start with:
+
+- Provision EC2
+- Create VPC + subnets
+- Create IAM roles
+- Create S3 bucket
+
+Understand:
+
+- State files
+- Plan vs apply
+- Idempotency
+- Modules
+- Variables
+
+You’re not memorizing syntax.
+
+You’re learning infrastructure thinking.
+
+---
+
+# Phase 4 – Automation Layer (8–12 Months)
+
+Now bring in boto3 + automation.
+
+Examples:
+
+- Script to find unused EBS volumes
+- Script to stop instances with no traffic
+- Script to rotate IAM keys
+- Script to tag all untagged resources
+- Generate simple compliance report
+
+Now you understand:
+
+Terraform builds.
+
+Python operates.
