@@ -105,3 +105,125 @@ Now you understand:
 Terraform builds.
 
 Python operates.
+
+Tier 1 – Process & Service Control (Cloud Core)
+
+If you only learn one category first, make it this.
+
+1. systemctl
+
+Manage services.
+
+systemctl status nginx
+systemctl restart nginx
+systemctl enable nginx
+systemctl disable nginx
+
+
+Cloud reality:
+Instances go down because services crash.
+You must be calm here.
+
+2. journalctl
+
+Read logs from systemd services.
+
+journalctl -u nginx
+journalctl -xe
+journalctl -f
+
+
+This is how you debug fast.
+
+3. ps / top / htop
+ps aux | grep nginx
+top
+
+
+Process visibility = operational awareness.
+
+Tier 2 – Networking (Very Important)
+
+Most cloud interviews touch this.
+
+4. ss (modern netstat)
+ss -tulnp
+
+
+Shows:
+
+Listening ports
+
+What process owns them
+
+5. ping
+ping google.com
+
+
+Basic but foundational.
+
+6. curl
+
+Massively important.
+
+curl http://localhost
+curl -I https://example.com
+
+
+Test web services, APIs, health checks.
+
+7. traceroute
+traceroute google.com
+
+
+Understanding routing paths.
+
+Tier 3 – File & Log Mastery
+8. grep
+grep "error" /var/log/syslog
+grep -i fail auth.log
+
+
+This is used constantly.
+
+9. tail
+tail -f /var/log/syslog
+
+
+Live log streaming.
+
+10. cat, less, head
+less file.txt
+head -20 file.txt
+
+Tier 4 – Permissions & Users (Underrated)
+11. chmod
+chmod 755 script.sh
+
+12. chown
+chown user:group file.txt
+
+13. id, whoami
+id
+whoami
+
+
+Cloud IAM makes more sense when Linux permissions make sense.
+
+Tier 5 – Disk & System Health
+14. df
+df -h
+
+15. du
+du -sh *
+
+16. free
+free -m
+
+Tier 6 – SSH (Cloud Essential)
+ssh user@host
+scp file.txt user@host:/tmp
+
+
+Cloud = remote systems.
+SSH is oxygen.
