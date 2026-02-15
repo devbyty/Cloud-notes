@@ -1,0 +1,26 @@
+/
+/bin
+/var/log
+/home
+/tmp
+/root
+/opt
+/etc
+
+df
+touch - create file
+file
+
+navigate file system:
+cd
+ls
+pwd
+
+(vim, nano) - edit files and name them
+
+adduser - create group
+groupadd - add/edit group
+chmod - file permissions
+chown - file ownership
+
+(ls) cmd | (-l) options | (/) argument
