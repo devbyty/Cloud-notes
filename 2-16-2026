@@ -1,0 +1,133 @@
+	•	API = rules for talking to a system
+	•	JSON = data format used in the conversation
+
+Now we zoom into SDK.
+
+⸻
+
+What Is An SDK Really?
+
+SDK = Software Development Kit
+
+That sounds big, but in practice it usually means:
+
+A language-specific toolbox that makes using an API easier.
+
+That’s it.
+
+⸻
+
+Let’s Make It Concrete
+
+Imagine AWS gives you only this:
+
+Documentation that says:
+
+To create an EC2 instance, send an HTTPS POST request to:
+
+https://ec2.amazonaws.com
+
+Include these headers.
+Include this cryptographic signature.
+Include this JSON body.
+
+You could do it manually in Python using low-level HTTP libraries.
+
+But that would mean:
+	•	Building the HTTP request yourself
+	•	Generating AWS Signature Version 4
+	•	Adding headers correctly
+	•	Handling errors manually
+	•	Parsing JSON responses manually
+
+That’s a lot.
+
+⸻
+
+What Boto3 Does (The SDK)
+
+Instead, you write:
+
+import boto3
+
+ec2 = boto3.client("ec2")
+
+ec2.run_instances(
+    ImageId="ami-123",
+    InstanceType="t2.micro",
+    MinCount=1,
+    MaxCount=1
+)
+
+That’s clean.
+
+Behind the scenes, the SDK:
+	1.	Builds the HTTPS request
+	2.	Signs it with your credentials
+	3.	Sends it to AWS
+	4.	Receives JSON
+	5.	Converts it into Python dictionaries
+	6.	Handles errors
+
+You didn’t deal with HTTP directly at all.
+
+⸻
+
+Simple Mental Model
+
+API = The highway rules
+HTTPS = The road
+JSON = The package being delivered
+SDK = Your car with cruise control and automatic steering
+
+You could walk (manual API calls).
+
+Or you could drive (SDK).
+
+⸻
+
+Important Clarification
+
+An SDK is not:
+	•	The cloud
+	•	The server
+	•	The API itself
+
+It is just a helper library for developers.
+
+⸻
+
+Even Simpler Version
+
+API says:
+
+“Here’s how you talk to me.”
+
+SDK says:
+
+“Here, I’ll handle the talking for you.”
+
+⸻
+
+Different Languages Have Different SDKs
+
+AWS provides:
+	•	Boto3 (Python)
+	•	AWS SDK for Java
+	•	AWS SDK for JavaScript
+	•	AWS SDK for Go
+	•	AWS SDK for .NET
+
+Same API.
+Different language tools.
+
+⸻
+
+The Real Unlock
+
+The API is universal.
+
+The SDK is language-specific.
+
+The API doesn’t change.
+The SDK depends on what programming language you’re using.
