@@ -131,3 +131,186 @@ The SDK is language-specific.
 
 The API doesn’t change.
 The SDK depends on what programming language you’re using.
+---
+# Cloud Ops / Cloud Infrastructure Pivot Plan
+
+## Goal
+Transition from IT support → Cloud Operations / Cloud Infrastructure role.
+
+Core principle:
+
+Cloud Ops = Linux + Networking + Automation + Cloud
+
+AWS is the environment.
+Foundations come first.
+
+---
+
+# Phase 1 — Linux Foundation (Weeks 1–2)
+
+## Objective
+Be comfortable living inside Linux without fear.
+
+## Core Skills
+- SSH usage
+- File system navigation (`ls`, `cd`, `pwd`)
+- File permissions (`chmod`, `chown`)
+- User management (`useradd`, `usermod`)
+- Process management (`ps`, `top`, `kill`)
+- System services (`systemctl`)
+- Logs (`/var/log`, `journalctl`)
+- Networking tools (`curl`, `ss`, `ping`)
+- Package management (`yum`, `dnf`, `apt`)
+- Bash basics (pipes, redirects, variables)
+
+## Weekly Practice Ideas
+- Launch EC2 and configure something manually
+- Install nginx, break it, fix it
+- Create users and restrict permissions
+- Monitor processes and kill runaway services
+
+## Outcome
+You can debug a Linux server without panic.
+
+---
+
+# Phase 2 — Networking Fundamentals (Weeks 2–3)
+
+## Objective
+Understand networking well enough that VPCs make sense.
+
+## Core Concepts
+- What is a subnet?
+- CIDR notation (e.g., 10.0.1.0/24)
+- Public vs private IP
+- NAT gateway
+- Route tables
+- Security groups vs firewalls
+- DNS basics
+- TCP vs UDP
+
+## Practice
+- Draw simple VPC diagrams
+- Create security groups and test access
+- Restrict SSH by IP
+- Explain how a public web server works end-to-end
+
+## Outcome
+You can explain how traffic flows through AWS.
+
+---
+
+# Phase 3 — Automation (Weeks 3–4)
+
+## Objective
+Automate instead of clicking.
+
+## Python Focus (Not App Dev)
+- Variables, loops, conditionals
+- Working with JSON
+- File I/O
+- Basic error handling
+
+## AWS Automation
+- boto3 basics
+- List S3 buckets
+- Launch/describe EC2
+- Parse CLI JSON output
+
+## Bash Practice
+- Environment variables
+- Writing small scripts
+- Using pipes with `jq` or `--query`
+
+## Outcome
+You can script repetitive tasks confidently.
+
+---
+
+# Phase 4 — Infrastructure as Code (Weeks 4–6)
+
+## Objective
+Deploy infrastructure consistently using code.
+
+## Tools to Learn
+- AWS SAM
+- CloudFormation basics
+- (Optional later: Terraform)
+
+## Concepts
+- What a template is
+- Resources vs properties
+- IAM roles inside templates
+- Deployment lifecycle
+
+## Practice
+- Deploy Lambda via SAM
+- Add API Gateway
+- Add DynamoDB to template
+- Modify and redeploy safely
+
+## Outcome
+You understand how real teams deploy cloud infrastructure.
+
+---
+
+# Ongoing: Interview Readiness Layer
+
+After foundations stabilize:
+
+## Be able to explain:
+- What is a VPC?
+- How does Lambda scale?
+- Difference between EC2 and Lambda
+- What is least privilege?
+- What happens during a cold start?
+- How would you deploy 100 servers?
+
+## Build Talking Points
+From labs you’ve done:
+- EC2 web server
+- IAM restricted user
+- Lambda cold vs warm start
+- SAM deployment
+- S3 versioning
+
+---
+
+# Mental Model Summary
+
+Cloud Ops is NOT:
+- Memorizing AWS services.
+
+Cloud Ops IS:
+- Operating systems
+- Networking
+- Automation
+- Infrastructure reasoning
+
+AWS is just the platform where those skills live.
+
+---
+
+# Recommended Weekly Rhythm
+
+3–4 sessions per week:
+
+- 1 Linux lab
+- 1 AWS lab
+- 1 Networking or automation drill
+- 1 recap / notes consolidation
+
+Consistency > intensity.
+
+---
+
+# Final Note
+
+You are already doing the right things:
+- CLI work
+- IAM practice
+- EC2 hands-on
+- Lambda experiments
+- Cleanup discipline
+
+That is real CloudOps progression.
